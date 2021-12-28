@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:padding="10dp"
+        android:elevation="10dp">
+
+        <ImageView
+            android:id="@+id/image_view"
+            android:layout_width="100dp"
+            android:layout_height="150dp"
+            />
+
+        <TextView
+            android:id="@+id/rname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="dr.chaman"
+            android:layout_toRightOf="@id/image_view"
+            android:layout_marginLeft="10dp"
+            android:textSize="20sp"
+            android:fontFamily="cursive"/>
+        <RatingBar
+            android:id="@+id/card_rat_5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/Widget.AppCompat.RatingBar.Small"
+            android:layout_below="@id/rname"
+            android:layout_toRightOf="@id/image_view"
+            android:layout_marginLeft="10dp"
+            android:rating="4.5"/>
+        <TextView
+            android:id="@+id/card_doc_desc5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="wavhm agaxbcjb abjbcan jbwjab"
+            android:layout_below="@id/card_rat_5"
+            android:layout_toRightOf="@id/image_view"
+            android:padding="10dp"/>
+        <TextView
+            android:id="@+id/doctor_fees"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Doctor's Fees"
+            android:layout_toRightOf="@id/image_view"
+            android:layout_below="@id/card_doc_desc5"
+            android:padding="10dp"
+            android:background="@color/colorAccent"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1000"
+            android:layout_toRightOf="@id/doctor_fees"
+            android:layout_below="@id/card_doc_desc5"
+            android:layout_marginLeft="10dp"
+            android:padding="10dp"
+            android:background="@color/cardview_dark_background"/>
+
+
+    </RelativeLayout>
+
+
+</androidx.cardview.widget.CardView>

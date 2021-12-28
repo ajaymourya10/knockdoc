@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_home_doc"
+            android:icon="@drawable/ic_home"
+            android:title="@string/home" />
+    </group>
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_profile_doc"
+            android:title="@string/profile">
+
+            <menu>
+                <item
+                    android:id="@+id/nav_edit_profile_doc"
+                    android:icon="@drawable/ic_person_24"
+                    android:title="@string/edit_profile" />
+
+
+                <item
+                    android:id="@+id/nav_change_password_doc"
+                    android:icon="@drawable/ic_baseline_lock_24"
+                    android:title="Change Password" />
+
+
+            </menu>
+        </item>
+
+
+    </group>
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_clinic"
+            android:title="Clinic/Hospital">
+
+            <menu>
+                <item
+                    android:id="@+id/nav_edit_profile_clinic"
+                    android:icon="@drawable/ic_baseline_local_hospital_24"
+                    android:title="Edit Clinic/Hospital" />
+
+            </menu>
+        </item>
+    </group>
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_schedule"
+            android:title="Appointments">
+
+            <menu>
+
+                <item
+                    android:id="@+id/nav_appointment_requests_doc"
+                    android:icon="@drawable/ic_si_glyph_man_doctor"
+                    android:title="@string/appointment_req" />
+
+                <item
+                    android:id="@+id/nav_view_appointments_doc"
+                    android:icon="@drawable/ic_baseline_list_24"
+                    android:title="Requested Prescriptions" />
+            </menu>
+
+        </item>
+    </group>
+
+
+    <group android:checkableBehavior="single">
+        <item
+            android:title="Logout">
+
+            <menu>
+                <item
+                    android:id="@+id/nav_log_out_doc"
+                    android:icon="@drawable/ic_baseline_exit_to_app_24"
+                    android:title="Logout" />
+
+            </menu>
+        </item>
+    </group>
+
+</menu>

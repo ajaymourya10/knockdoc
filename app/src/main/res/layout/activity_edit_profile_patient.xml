@@ -1,0 +1,395 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#6F1E88E5"
+    android:orientation="vertical"
+    tools:context=".patient.EditProfilePatient">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <include
+            android:id="@+id/patient_toolbar"
+            layout="@layout/toolbar" />
+
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/patient_profile_pic"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="50dp"
+            android:padding="10dp"
+            android:src="@drawable/doctor"
+            app:civ_border_color="#000"
+            app:civ_border_width="1dp" />
+
+        <Button
+            android:id="@+id/edit_profile_pic_patient"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="0dp"
+            android:gravity="center"
+            android:paddingStart="20dp"
+            android:paddingTop="10dp"
+            android:paddingEnd="20dp"
+            android:paddingBottom="10dp"
+            android:text="Edit Profile Picture" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center">
+
+                <TextView
+                    android:id="@+id/name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:fontFamily="@font/roboto_slab"
+                    android:gravity="center"
+                    android:text="Name: "
+                    android:textColor="@color/black"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/patient_name_edit_profile"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="10dp"
+                    android:layout_toEndOf="@id/name"
+                    android:fontFamily="@font/roboto_slab"
+                    android:gravity="center"
+                    android:text="@string/dr_name"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:id="@+id/patient_name_edit_profile_icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="10dp"
+                    android:layout_toEndOf="@+id/patient_name_edit_profile"
+                    android:src="@drawable/ic_baseline_edit_24" />
+
+                <EditText
+                    android:id="@+id/edit_text_pt_name"
+                    android:layout_width="180dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center|center_vertical"
+                    android:layout_marginStart="10dp"
+                    android:layout_toEndOf="@id/name"
+                    android:inputType="textPersonName"
+                    android:padding="10dp"
+                    android:text="@string/dr_name"
+                    android:textSize="18sp" />
+
+
+                <Button
+                    android:id="@+id/btn_set_pt_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_toEndOf="@+id/edit_text_pt_name"
+                    android:padding="10dp"
+                    android:text="SET" />
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:gravity="center">
+
+                <TextView
+                    android:id="@+id/gender"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:fontFamily="@font/roboto_slab"
+                    android:gravity="center"
+                    android:text="Gender: "
+                    android:textColor="@color/black"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/patient_gender_edit_profile"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="10dp"
+                    android:layout_toEndOf="@id/gender"
+                    android:fontFamily="@font/roboto_slab"
+                    android:gravity="center"
+                    android:text="@string/dr_name"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:id="@+id/patient_gender_edit_profile_icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="10dp"
+                    android:layout_toEndOf="@+id/patient_gender_edit_profile"
+                    android:src="@drawable/ic_baseline_edit_24" />
+
+                <AutoCompleteTextView
+                    android:id="@+id/edit_text_pt_gender"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center|center_vertical"
+                    android:layout_marginStart="10dp"
+                    android:layout_toEndOf="@id/gender"
+                    android:completionThreshold="1"
+                    android:inputType="textPersonName"
+                    android:maxLines="1"
+                    android:padding="10dp"
+                    android:text="@string/city"
+                    android:textSize="18sp" />
+
+
+                <Button
+                    android:id="@+id/btn_set_pt_gender"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_toEndOf="@+id/edit_text_pt_gender"
+                    android:padding="10dp"
+                    android:text="SET" />
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:gravity="center">
+
+                <TextView
+                    android:id="@+id/dob"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:fontFamily="@font/roboto_slab"
+                    android:gravity="center"
+                    android:text="Date Of Birth: "
+                    android:textColor="@color/black"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/patient_dob_edit_profile"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="10dp"
+                    android:layout_toEndOf="@id/dob"
+                    android:fontFamily="@font/roboto_slab"
+                    android:gravity="center"
+                    android:text="08 - 09 - 2001"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:id="@+id/patient_dob_edit_profile_icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="10dp"
+                    android:layout_toEndOf="@+id/patient_dob_edit_profile"
+                    android:src="@drawable/ic_baseline_edit_24" />
+
+                <com.santalu.maskara.widget.MaskEditText
+                    android:id="@+id/edit_text_pt_dob"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@+id/dob"
+                    android:background="@drawable/edit_text_background"
+                    android:inputType="date"
+                    android:padding="20dp"
+                    android:textColorHint="#434040"
+                    app:mask="__ - __ - ____"
+                    app:maskStyle="completable" />
+
+
+                <Button
+                    android:id="@+id/btn_set_pt_dob"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_toEndOf="@+id/edit_text_pt_dob"
+                    android:padding="10dp"
+                    android:text="SET" />
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:gravity="center">
+
+                <TextView
+                    android:id="@+id/city"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:fontFamily="@font/roboto_slab"
+                    android:gravity="center"
+                    android:text="City: "
+                    android:textColor="@color/black"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/patient_city_edit_profile"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="10dp"
+                    android:layout_toEndOf="@id/city"
+                    android:fontFamily="@font/roboto_slab"
+                    android:gravity="center"
+                    android:text="@string/dr_name"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:id="@+id/patient_city_edit_profile_icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="10dp"
+                    android:layout_toEndOf="@+id/patient_city_edit_profile"
+                    android:src="@drawable/ic_baseline_edit_24" />
+
+                <AutoCompleteTextView
+                    android:id="@+id/edit_text_pt_city"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center|center_vertical"
+                    android:layout_marginStart="10dp"
+                    android:layout_toEndOf="@id/city"
+                    android:completionThreshold="1"
+                    android:inputType="textPersonName"
+                    android:maxLines="1"
+                    android:padding="10dp"
+                    android:text="@string/city"
+                    android:textSize="18sp" />
+
+
+                <Button
+                    android:id="@+id/btn_set_pt_city"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_toEndOf="@+id/edit_text_pt_city"
+                    android:padding="10dp"
+                    android:text="SET" />
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:gravity="center">
+
+                <TextView
+                    android:id="@+id/email"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:fontFamily="@font/roboto_slab"
+                    android:gravity="center"
+                    android:text="Email: "
+                    android:textColor="@color/black"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/patient_email_edit_profile"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="10dp"
+                    android:layout_toEndOf="@id/email"
+                    android:fontFamily="@font/roboto_slab"
+                    android:gravity="center"
+                    android:text="@string/dr_name"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:id="@+id/patient_email_edit_profile_icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="10dp"
+                    android:layout_toEndOf="@+id/patient_email_edit_profile"
+                    android:src="@drawable/ic_baseline_edit_24" />
+
+                <EditText
+                    android:id="@+id/edit_text_pt_email"
+                    android:layout_width="180dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center|center_vertical"
+                    android:layout_marginStart="10dp"
+                    android:layout_toEndOf="@id/email"
+                    android:inputType="textPersonName"
+                    android:padding="10dp"
+                    android:text="@string/dr_name"
+                    android:textSize="18sp" />
+
+
+                <Button
+                    android:id="@+id/btn_set_pt_email"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_toEndOf="@+id/edit_text_pt_email"
+                    android:padding="10dp"
+                    android:text="SET" />
+
+
+            </RelativeLayout>
+
+            <Button
+                android:id="@+id/saveEditProfilePatient"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="50dp"
+                android:layout_marginTop="50dp"
+                android:layout_marginEnd="50dp"
+                android:padding="15dp"
+                android:text="Save" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+
+</ScrollView>

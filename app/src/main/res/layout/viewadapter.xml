@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="5dp"
+    app:cardBackgroundColor="#45EABB"
+    app:cardCornerRadius="8dp"
+    app:cardElevation="8dp"
+    app:cardMaxElevation="10dp"
+    app:cardPreventCornerOverlap="true"
+    app:cardUseCompatPadding="true">
+
+    <RelativeLayout
+        android:layout_width="391dp"
+        android:layout_height="173dp">
+
+        <TextView
+            android:id="@+id/Patient"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:text="Anonymous"
+            android:textColor="@color/black"
+            android:textSize="15dp"
+            android:drawableStart="@drawable/ic_person1"
+            android:fontFamily="@font/amarante"
+            android:padding="5dp" />
+
+        <RatingBar
+            android:id="@+id/Rating"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/Patient"
+            android:layout_marginTop="12dp"
+            android:layout_marginBottom="10dp"
+            android:clickable="false"
+            android:scaleX="0.5"
+            android:scaleY="0.5"
+            android:progressTint="#DD2121"
+            android:numStars="5"
+            android:rating="2" />
+
+        <TextView
+            android:layout_width="320dp"
+            android:layout_height="101dp"
+            android:id="@+id/Feedback"
+            android:layout_below="@+id/Rating"
+            android:layout_marginStart="-350dp"
+            android:layout_toEndOf="@+id/Rating" />
+
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/ic_home"
+            android:title="@string/home" />
+    </group>
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_profile"
+            android:title="@string/profile">
+
+            <menu>
+                <item
+                    android:id="@+id/nav_edit_profile"
+                    android:icon="@drawable/ic_person_24"
+                    android:title="@string/edit_profile" />
+
+                <item
+                    android:id="@+id/nav_change_password"
+                    android:icon="@drawable/ic_baseline_lock_24"
+                    android:title="Change Password" />
+            </menu>
+
+        </item>
+
+
+    </group>
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_appointments"
+            android:title="@string/appointments">
+
+            <menu>
+                <item
+                    android:id="@+id/nav_appointment_requests"
+                    android:icon="@drawable/ic_si_glyph_man_doctor"
+                    android:title="Accepted Appointments" />
+                <item
+                    android:id="@+id/nav_accepted_requests"
+                    android:icon="@drawable/ic_si_glyph_man_doctor"
+                    android:title="Request Prescription" />
+
+                <item
+                    android:id="@+id/nav_view_appointments"
+                    android:icon="@drawable/ic_baseline_list_24"
+                    android:title="View Prescription" />
+            </menu>
+        </item>
+    </group>
+
+    <group android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/nav_log_out"
+            android:icon="@drawable/ic_baseline_exit_to_app_24"
+            android:title="@string/logout" />
+
+    </group>
+
+</menu>

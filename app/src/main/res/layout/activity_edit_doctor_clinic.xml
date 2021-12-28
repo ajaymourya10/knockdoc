@@ -1,0 +1,648 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#6F1E88E5"
+    tools:context=".doctor.EditDoctorClinic">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <include
+            android:id="@+id/clinic_toolbar"
+            layout="@layout/toolbar" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:orientation="vertical">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_gravity="center"
+                android:src="@drawable/doctor_pic" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                android:gravity="center_horizontal">
+
+                <TextView
+                    android:id="@+id/name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:fontFamily="@font/roboto_slab"
+                    android:gravity="center"
+                    android:text="Clinic Title:"
+                    android:textColor="@color/black"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/clinic_name_edit_profile"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="10dp"
+                    android:layout_toEndOf="@id/name"
+                    android:fontFamily="@font/roboto_slab"
+                    android:gravity="center"
+                    android:text="Title of Clinic"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:id="@+id/clinic_name_edit_profile_icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="10dp"
+                    android:layout_toEndOf="@+id/clinic_name_edit_profile"
+                    android:src="@drawable/ic_baseline_edit_24" />
+
+                <EditText
+                    android:id="@+id/edit_text_clinic_name"
+                    android:layout_width="180dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center|center_vertical"
+                    android:layout_marginStart="10dp"
+                    android:layout_toEndOf="@id/name"
+                    android:hint="Eg: Ajay's Clinic"
+                    android:inputType="textPersonName"
+                    android:padding="10dp"
+                    android:textSize="18sp" />
+
+                <Button
+                    android:id="@+id/btn_set_clinic_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_toEndOf="@+id/edit_text_clinic_name"
+                    android:padding="10dp"
+                    android:text="SET" />
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:gravity="center">
+
+                <TextView
+                    android:id="@+id/degree"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:fontFamily="@font/roboto_slab"
+                    android:gravity="center"
+                    android:text="Your Degree:"
+                    android:textColor="@color/black"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/doctor_degree_edit_profile"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="10dp"
+                    android:layout_toEndOf="@id/degree"
+                    android:fontFamily="@font/roboto_slab"
+                    android:gravity="center"
+                    android:text="M.B.B.S MD"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:id="@+id/doctor_degree_edit_profile_icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="10dp"
+                    android:layout_toEndOf="@+id/doctor_degree_edit_profile"
+                    android:src="@drawable/ic_baseline_edit_24" />
+
+                <AutoCompleteTextView
+                    android:id="@+id/edit_text_doctor_degree"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center|center_vertical"
+                    android:layout_marginStart="10dp"
+                    android:layout_toEndOf="@id/degree"
+                    android:completionThreshold="1"
+                    android:hint="eg:M.B.B.S"
+                    android:inputType="textPersonName"
+                    android:maxLines="1"
+                    android:padding="10dp"
+                    android:textSize="18sp" />
+
+
+                <Button
+                    android:id="@+id/btn_set_doctor_degree"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_toEndOf="@+id/edit_text_doctor_degree"
+                    android:padding="10dp"
+                    android:text="SET" />
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:gravity="center">
+
+                <TextView
+                    android:id="@+id/practice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:fontFamily="@font/roboto_slab"
+                    android:gravity="center"
+                    android:text="Practice Starting Year:"
+                    android:textColor="@color/black"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/doctor_practice_edit_profile"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="10dp"
+                    android:layout_toEndOf="@id/practice"
+                    android:fontFamily="@font/roboto_slab"
+                    android:gravity="center"
+                    android:text="2005"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:id="@+id/doctor_practice_edit_profile_icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="10dp"
+                    android:layout_toEndOf="@+id/doctor_practice_edit_profile"
+                    android:src="@drawable/ic_baseline_edit_24" />
+
+                <AutoCompleteTextView
+                    android:id="@+id/edit_text_doctor_practice"
+                    android:layout_width="90dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center|center_vertical"
+                    android:layout_marginStart="10dp"
+                    android:layout_toEndOf="@id/practice"
+                    android:completionThreshold="1"
+                    android:hint="eg: 2005"
+                    android:inputType="number|date"
+                    android:maxLines="1"
+                    android:padding="10dp"
+                    android:textSize="18sp" />
+
+
+                <Button
+                    android:id="@+id/btn_set_doctor_practice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_toEndOf="@+id/edit_text_doctor_practice"
+                    android:padding="10dp"
+                    android:text="SET" />
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:gravity="center">
+
+                <TextView
+                    android:id="@+id/type"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:fontFamily="@font/roboto_slab"
+                    android:gravity="center"
+                    android:text="Doctor Type:"
+                    android:textColor="@color/black"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/doctor_type_edit_profile"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="10dp"
+                    android:layout_toEndOf="@id/type"
+                    android:fontFamily="@font/roboto_slab"
+                    android:gravity="center"
+                    android:text="Physician"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:id="@+id/doctor_type_edit_profile_icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="10dp"
+                    android:layout_toEndOf="@+id/doctor_type_edit_profile"
+                    android:src="@drawable/ic_baseline_edit_24" />
+
+                <AutoCompleteTextView
+                    android:id="@+id/edit_text_doctor_type"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center|center_vertical"
+                    android:layout_marginStart="10dp"
+                    android:layout_toEndOf="@id/type"
+                    android:completionThreshold="1"
+                    android:hint="Eg: Physician"
+                    android:inputType="textPersonName"
+                    android:maxLines="1"
+                    android:padding="10dp"
+                    android:text="@string/city"
+                    android:textSize="18sp" />
+
+
+                <Button
+                    android:id="@+id/btn_set_doctor_type"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_toEndOf="@+id/edit_text_doctor_type"
+                    android:padding="10dp"
+                    android:text="SET" />
+
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                android:gravity="center_horizontal">
+
+                <TextView
+                    android:id="@+id/fee"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:fontFamily="@font/roboto_slab"
+                    android:gravity="center"
+                    android:text="Fees in \u20B9: "
+                    android:textColor="@color/black"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/clinic_fee_edit_profile"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="10dp"
+                    android:layout_toEndOf="@id/fee"
+                    android:fontFamily="@font/roboto_slab"
+                    android:gravity="center"
+                    android:text="2000 \u20B9"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:id="@+id/clinic_fee_edit_profile_icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="10dp"
+                    android:layout_toEndOf="@+id/clinic_fee_edit_profile"
+                    android:src="@drawable/ic_baseline_edit_24" />
+
+                <EditText
+                    android:id="@+id/edit_text_clinic_fee"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center|center_vertical"
+                    android:layout_marginStart="10dp"
+                    android:layout_toEndOf="@id/fee"
+                    android:hint="eg 2000"
+                    android:inputType="number"
+                    android:padding="10dp"
+                    android:textSize="18sp" />
+
+                <Button
+                    android:id="@+id/btn_set_clinic_fee"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_toEndOf="@+id/edit_text_clinic_fee"
+                    android:padding="10dp"
+                    android:text="SET" />
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:gravity="center">
+
+                <TextView
+                    android:id="@+id/address"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:fontFamily="@font/roboto_slab"
+                    android:gravity="center"
+                    android:text="Complete Address:"
+                    android:textColor="@color/black"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/doctor_address_edit_profile"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="10dp"
+                    android:layout_toEndOf="@id/address"
+                    android:fontFamily="@font/roboto_slab"
+                    android:gravity="center"
+                    android:text="@string/address"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:id="@+id/doctor_address_edit_profile_icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="10dp"
+                    android:layout_toEndOf="@+id/doctor_address_edit_profile"
+                    android:src="@drawable/ic_baseline_edit_24" />
+
+                <EditText
+                    android:id="@+id/edit_text_doctor_address"
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center|center_vertical"
+                    android:layout_marginStart="10dp"
+                    android:layout_toEndOf="@id/address"
+                    android:hint="@string/address"
+                    android:inputType="textPersonName"
+                    android:padding="10dp"
+                    android:textSize="18sp" />
+
+
+                <Button
+                    android:id="@+id/btn_set_doctor_address"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_toEndOf="@+id/edit_text_doctor_address"
+                    android:padding="10dp"
+                    android:text="SET" />
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:gravity="center">
+
+                <TextView
+                    android:id="@+id/city"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:fontFamily="@font/roboto_slab"
+                    android:gravity="center"
+                    android:text="City:"
+                    android:textColor="@color/black"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/doctor_city_edit_profile"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="10dp"
+                    android:layout_toEndOf="@id/city"
+                    android:fontFamily="@font/roboto_slab"
+                    android:gravity="center"
+                    android:text="@string/city"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:id="@+id/doctor_city_edit_profile_icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="10dp"
+                    android:layout_toEndOf="@+id/doctor_city_edit_profile"
+                    android:src="@drawable/ic_baseline_edit_24" />
+
+                <AutoCompleteTextView
+                    android:id="@+id/edit_text_doctor_city"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center|center_vertical"
+                    android:layout_marginStart="10dp"
+                    android:layout_toEndOf="@id/city"
+                    android:completionThreshold="1"
+                    android:hint="eg New Delhi"
+                    android:inputType="textPersonName"
+                    android:maxLines="1"
+                    android:padding="10dp"
+                    android:textSize="18sp" />
+
+
+                <Button
+                    android:id="@+id/btn_set_doctor_city"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_toEndOf="@+id/edit_text_doctor_city"
+                    android:padding="10dp"
+                    android:text="SET" />
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:gravity="center">
+
+                <TextView
+                    android:id="@+id/pin"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:fontFamily="@font/roboto_slab"
+                    android:gravity="center"
+                    android:text="Pin Code:"
+                    android:textColor="@color/black"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/doctor_pin_edit_profile"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="10dp"
+                    android:layout_toEndOf="@id/pin"
+                    android:fontFamily="@font/roboto_slab"
+                    android:gravity="center"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:id="@+id/doctor_pin_edit_profile_icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="10dp"
+                    android:layout_toEndOf="@+id/doctor_pin_edit_profile"
+                    android:src="@drawable/ic_baseline_edit_24" />
+
+                <com.santalu.maskara.widget.MaskEditText
+                    android:id="@+id/edit_text_doctor_pin"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center|center_vertical"
+                    android:layout_marginStart="10dp"
+                    android:layout_toEndOf="@id/pin"
+                    android:background="@drawable/edit_text_background"
+                    android:completionThreshold="1"
+                    android:hint="eg 262 201"
+                    android:inputType="number"
+                    android:maxLines="1"
+                    android:padding="20dp"
+                    android:text="250 020"
+                    android:textColorHint="#434040"
+                    android:textSize="18sp"
+                    app:mask="___ ___"
+                    app:maskStyle="completable" />
+
+
+                <Button
+                    android:id="@+id/btn_set_doctor_pin"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_toEndOf="@+id/edit_text_doctor_pin"
+                    android:padding="10dp"
+                    android:text="SET" />
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:gravity="center">
+
+                <TextView
+                    android:id="@+id/state"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:fontFamily="@font/roboto_slab"
+                    android:gravity="center"
+                    android:text="State:"
+                    android:textColor="@color/black"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/doctor_state_edit_profile"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="10dp"
+                    android:layout_toEndOf="@id/state"
+                    android:fontFamily="@font/roboto_slab"
+                    android:gravity="center"
+                    android:text="@string/dr_name"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:id="@+id/doctor_state_edit_profile_icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="10dp"
+                    android:layout_toEndOf="@+id/doctor_state_edit_profile"
+                    android:src="@drawable/ic_baseline_edit_24" />
+
+                <AutoCompleteTextView
+                    android:id="@+id/edit_text_doctor_state"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center|center_vertical"
+                    android:layout_marginStart="10dp"
+                    android:layout_toEndOf="@id/state"
+                    android:completionThreshold="1"
+                    android:hint="eg: Uttar Pradesh"
+                    android:inputType="textPersonName"
+                    android:maxLines="1"
+                    android:padding="10dp"
+                    android:textSize="18sp" />
+
+
+                <Button
+                    android:id="@+id/btn_set_doctor_state"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_toEndOf="@+id/edit_text_doctor_state"
+                    android:padding="10dp"
+                    android:text="SET" />
+
+
+            </RelativeLayout>
+
+            <Button
+                android:id="@+id/saveEditProfileClinic"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="50dp"
+                android:layout_marginTop="25dp"
+                android:layout_marginEnd="50dp"
+                android:padding="15dp"
+                android:text="Save" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+
+</ScrollView>

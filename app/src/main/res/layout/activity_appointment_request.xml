@@ -1,0 +1,302 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    tools:context=".patient.AppointmentRequest">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+
+        <include
+            android:id="@+id/appointment_req"
+            layout="@layout/toolbar" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="?android:attr/actionBarSize"
+            android:gravity="center">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/profile_photo"
+                    android:layout_width="180dp"
+                    android:layout_height="180dp"
+                    android:layout_gravity="center"
+                    android:layout_margin="20dp"
+                    android:src="@drawable/doctor_pic" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="-10dp"
+                    android:fontFamily="@font/roboto_slab"
+                    android:gravity="center"
+                    android:text="*Upload a photo of patient for making better user-interface"
+                    android:textSize="12sp" />
+
+                <Button
+                    android:id="@+id/select_photo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="10dp"
+                    android:paddingStart="50dp"
+                    android:paddingEnd="50dp"
+                    android:text="Select Photo" />
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:fontFamily="@font/roboto_slab"
+                            android:gravity="right"
+                            android:padding="5dp"
+                            android:text="Patient's Name"
+                            android:textSize="18sp" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginTop="10dp"
+                            android:fontFamily="@font/roboto_slab"
+                            android:gravity="right"
+                            android:paddingTop="5dp"
+                            android:paddingBottom="5dp"
+                            android:text="Date of Birth"
+                            android:textSize="18sp" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginTop="10dp"
+                            android:fontFamily="@font/roboto_slab"
+                            android:gravity="right"
+                            android:paddingTop="5dp"
+                            android:paddingBottom="5dp"
+                            android:text="Gender"
+                            android:textSize="18sp" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginTop="10dp"
+                            android:fontFamily="@font/roboto_slab"
+                            android:gravity="right"
+                            android:paddingTop="5dp"
+                            android:paddingBottom="5dp"
+                            android:text="Date of Appointment"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginTop="10dp"
+                            android:fontFamily="@font/roboto_slab"
+                            android:gravity="right"
+                            android:paddingTop="5dp"
+                            android:paddingBottom="5dp"
+                            android:text="Address"
+                            android:textSize="18sp" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginTop="10dp"
+                            android:fontFamily="@font/roboto_slab"
+                            android:gravity="right"
+                            android:paddingTop="5dp"
+                            android:paddingBottom="5dp"
+                            android:text="Aadhar Number"
+                            android:textSize="18sp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:orientation="vertical">
+
+                        <EditText
+                            android:id="@+id/pt_name_appointment_req"
+                            android:layout_width="160dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:background="@color/white"
+                            android:fontFamily="@font/roboto_slab"
+                            android:hint="eg Ajay Singh"
+                            android:inputType="textPersonName"
+                            android:paddingStart="10dp"
+                            android:paddingTop="5dp"
+                            android:paddingBottom="5dp"
+                            android:textSize="16sp" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:orientation="horizontal">
+
+                            <EditText
+                                android:id="@+id/pt_dob_appointment_req"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight=".2"
+                                android:background="@color/white"
+                                android:clickable="false"
+                                android:fontFamily="@font/roboto_slab"
+                                android:inputType="date"
+                                android:paddingStart="10dp"
+                                android:paddingTop="5dp"
+                                android:paddingBottom="5dp"
+                                android:text="01/01/1980"
+                                android:textSize="16sp" />
+
+                            <ImageView
+                                android:id="@+id/pt_dob_btn_appointment_req"
+                                android:layout_width="match_parent"
+                                android:layout_height="25dp"
+                                android:layout_gravity="center_vertical"
+                                android:layout_weight=".9"
+                                android:src="@drawable/ic_calender" />
+
+                        </LinearLayout>
+
+                        <AutoCompleteTextView
+                            android:id="@+id/pt_gender_appointment_req"
+                            android:layout_width="160dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginTop="15dp"
+                            android:background="@color/white"
+                            android:hint="@string/choose_gender"
+                            android:inputType="textPersonName"
+                            android:paddingStart="10dp"
+                            android:paddingTop="5dp"
+                            android:paddingBottom="5dp" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:orientation="horizontal">
+
+                            <EditText
+                                android:id="@+id/appointment_date_appointment_req"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight=".2"
+                                android:background="@color/white"
+                                android:clickable="false"
+                                android:fontFamily="@font/roboto_slab"
+                                android:inputType="date"
+                                android:paddingStart="10dp"
+                                android:paddingTop="5dp"
+                                android:paddingBottom="5dp"
+                                android:text="08 - 09 - 1998"
+                                android:textSize="16sp" />
+
+                            <ImageView
+                                android:id="@+id/appointment_date_btn_appointment_req"
+                                android:layout_width="match_parent"
+                                android:layout_height="25dp"
+                                android:layout_gravity="center_vertical"
+                                android:layout_weight=".9"
+                                android:src="@drawable/ic_calender" />
+
+                        </LinearLayout>
+
+                        <EditText
+                            android:id="@+id/patient_address_appointment_req"
+                            android:layout_width="160dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginTop="10dp"
+                            android:background="@color/white"
+                            android:fontFamily="@font/roboto_slab"
+                            android:hint="address "
+                            android:inputType="textPersonName"
+                            android:paddingStart="10dp"
+                            android:paddingTop="5dp"
+                            android:paddingEnd="10dp"
+                            android:paddingBottom="5dp"
+                            android:textSize="16sp" />
+
+                        <com.santalu.maskara.widget.MaskEditText
+                            android:id="@+id/patient_aadhar_appointment_req"
+                            android:layout_width="160dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginTop="15dp"
+                            android:background="@color/white"
+                            android:fontFamily="@font/roboto_slab"
+                            android:hint="eg 5827 4567 8976"
+                            android:inputType="number"
+                            android:paddingStart="10dp"
+                            android:paddingTop="5dp"
+                            android:paddingBottom="5dp"
+                            android:textSize="16sp"
+                            app:mask="____ ____ ____"
+                            app:maskStyle="completable" />
+
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/next_btn_appointment_req"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="50dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginEnd="50dp"
+                    android:text="next" />
+
+            </LinearLayout>
+
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+
+</ScrollView>
